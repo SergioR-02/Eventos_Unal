@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "places",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Category"
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "Place"
   },
   "options": {
     "draftAndPublish": true
@@ -16,12 +16,9 @@
     },
     "event": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToOne",
       "target": "api::event.event",
-      "inversedBy": "categories"
-    },
-    "slug": {
-      "type": "uid"
+      "mappedBy": "place"
     }
   }
 }

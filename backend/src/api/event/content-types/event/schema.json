@@ -55,6 +55,15 @@
       "relation": "oneToMany",
       "target": "api::category.category",
       "mappedBy": "event"
+    },
+    "author": {
+      "type": "string"
+    },
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place",
+      "inversedBy": "event"
     }
   }
 }
