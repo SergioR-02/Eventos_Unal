@@ -60,10 +60,7 @@
       "type": "string"
     },
     "place": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::place.place",
-      "inversedBy": "event"
+      "type": "string"
     }
   }
 }
