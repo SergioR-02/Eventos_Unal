@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-white/80 dark:text-surface/80 text-sm">© 2025 Universidad Nacional de Colombia. Todos los derechos reservados.</p>
+          <p className="text-white/80 dark:text-surface/80 text-sm">© 2025 — Portal de eventos</p>
         </div>
       </div>
     </footer>

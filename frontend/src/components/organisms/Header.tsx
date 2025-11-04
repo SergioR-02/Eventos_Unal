@@ -50,7 +50,7 @@ export default function Header({
 
           {/* Centered title */}
           <h1 className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-text flex items-center pointer-events-none">
-            Events
+            Eventos
             {/* Use the UNAL icon from public/; spaces encoded as %20 for safety */}
             <img src="/image%207.svg" alt="UNAL" className="h-[80px] w-auto ml-2 object-contain" />
           </h1>
