@@ -1,4 +1,5 @@
 import { Article } from '../../types/article';
+import { useMemo } from 'react';
 import ArticleCard from '../molecules/ArticleCard';
 import Sidebar from '../organisms/Sidebar';
 
@@ -10,6 +11,13 @@ interface HomeViewProps {
 }
 
 export default function HomeView({ articles, onArticleClick, onCategoryClick, categories }: HomeViewProps) {
+  const recentSorted = useMemo(() => {
+    return [...articles].sort((a, b) => {
+      const da = new Date(a.date).getTime();
+      const db = new Date(b.date).getTime();
+      return db - da;
+    });
+  }, [articles]);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2">
@@ -29,7 +37,7 @@ export default function HomeView({ articles, onArticleClick, onCategoryClick, ca
 
       <div className="lg:col-span-1">
         <Sidebar
-          recentArticles={articles}
+          recentArticles={recentSorted}
           onArticleClick={onArticleClick}
           onCategoryClick={onCategoryClick}
           categories={categories}

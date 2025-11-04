@@ -32,10 +32,6 @@ export default function ArticleDetail({ article, relatedArticles, onBack, onArti
           {article.title}
         </h1>
 
-        <p className="text-lg text-muted leading-relaxed mb-6">
-          {article.excerpt}
-        </p>
-
         <EventInfo
           author={article.author}
           date={article.date}

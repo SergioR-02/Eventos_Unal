@@ -44,6 +44,8 @@ export function useArticles() {
 
   const handleBack = useCallback(() => {
     setSelectedArticle(null);
+    setCurrentCategory('Inicio');
+    setSearchQuery('');
     setView('home');
   }, []);
 
