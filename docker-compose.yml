@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: eventos-unal-backend
+    ports:
+      - "1337:1337"
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=1337
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=.tmp/data.db
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - backend-db:/app/.tmp
+      - backend-uploads:/app/public/uploads
+    networks:
+      - eventos-network
+    command: npm run develop
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: eventos-unal-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:1337
+      - VITE_API_TOKEN=
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - eventos-network
+    depends_on:
+      - backend
+    command: npm run dev -- --host
+
+volumes:
+  backend-db:
+    driver: local
+  backend-uploads:
+    driver: local
+
+networks:
+  eventos-network:
+    driver: bridge
