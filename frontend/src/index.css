@@ -1,0 +1,65 @@
+
+/* CSS variables for theme colors. We use space-separated RGB triplets so Tailwind can use
+	 them via the rgb(var(--...) / <alpha-value>) syntax configured in tailwind.config.js */
+:root {
+  --color-unal: 148 180 59; /* primary requested */
+  --color-unal-light: 193 211 125; /* lighter variant for accents */
+  --color-unal-gray: 177 178 176; /* requested neutral gray for contrast */
+
+  --color-page: 249 250 251; /* gray-50 */
+  --color-surface: 255 255 255; /* card backgrounds */
+  --color-text: 17 24 39; /* gray-900 */
+  --color-muted: 107 114 128; /* gray-500 */
+  --color-border: 229 231 235; /* gray-200 */
+  --color-accent: 52 104 35; /* darker green accent for strong contrast */
+}
+
+.dark {
+  --color-unal: 148 180 59; /* keep primary same in dark */
+  --color-unal-light: 205 220 120; /* slightly brighter variant for dark */
+  --color-unal-gray: 177 178 176; /* neutral gray available in dark too */
+
+  /* Make the page (main background) a bit lighter so cards (surface) stand out */
+  --color-page: 30 35 42; /* lighter dark page */
+  --color-surface: 18 22 28; /* slightly darker surface so cards contrast over page */
+  --color-text: 243 244 246; /* gray-100 */
+  --color-muted: 148 163 184; /* gray-400 */
+  --color-border: 55 65 81; /* gray-700 */
+  --color-accent: 160 200 80; /* brighter accent for highlights in dark */
+}
+
+/* Apply background and text using variables so the page switches instantly */
+html, body, #root {
+  height: 100%;
+  background-color: rgb(var(--color-page));
+  color: rgb(var(--color-text));
+}
+
+/* Ensure components that rely on 'bg-white' or similar still look good by providing
+	 a neutral surface color that Tailwind classes can override when needed. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small utility to force readable link/anchor contrast when using primary color */
+.link-primary {
+	color: rgb(var(--color-unal));
+}
+
+/* Optional helper classes using variables (usable in raw CSS if needed) */
+.bg-surface-var { background-color: rgb(var(--color-surface)); }
+.text-muted-var { color: rgb(var(--color-muted)); }
+.border-var { border-color: rgb(var(--color-border)); }
+.bg-unal-gray { background-color: rgb(var(--color-unal-gray)); }
+
+/* Header button hover styles that adapt to light/dark modes. */
+
+
+/* Light mode hover: soft unal-tinted background and slightly darker text */
+.header-btn:hover {
+  background-color: rgba(var(--color-unal), 0.12);
+  color: rgb(var(--color-unal));
+}
+
+
