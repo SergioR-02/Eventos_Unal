@@ -28,13 +28,13 @@ Este proyecto fue desarrollado como prueba técnica cumpliendo los siguientes re
 - ✅ Despliegue en la nube (Vercel + Strapi Cloud)
 
 ### Funcionalidades Principales
-- 🏠 Vista principal con listado de todos los eventos
-- 🔍 Búsqueda de eventos por título o descripción
-- 🏷️ Filtrado de eventos por categoría
-- 📄 Vista detallada de cada evento
-- 📱 Diseño responsive (móvil, tablet, escritorio)
-- 🎨 Modo claro/oscuro
-- 🔗 Eventos relacionados por categoría
+-  Vista principal con listado de todos los eventos
+-  Búsqueda de eventos por título o descripción
+-  Filtrado de eventos por categoría
+-  Vista detallada de cada evento
+-  Diseño responsive (móvil, tablet, escritorio)
+-  Modo claro/oscuro
+-  Eventos relacionados por categoría
 
 ---
 
@@ -205,6 +205,5 @@ Una de las características que más me gustó fue su integración con GitHub, y
 **Sergio Ruiz**
 
 - GitHub: [@SergioR-02](https://github.com/SergioR-02)
-- Email: [dicarvajalb@unal.edu.co](mailto:dicarvajalb@unal.edu.co)
 
 ---
