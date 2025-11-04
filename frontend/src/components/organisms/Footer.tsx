@@ -17,22 +17,42 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Enlaces Institucionales</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors">
+                <a
+                  href="https://unal.edu.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors"
+                >
                   Universidad Nacional
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors">
+                <a
+                  href="https://admisiones.unal.edu.co/pregrado"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors"
+                >
                   Admisiones
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors">
+                <a
+                  href="https://unal.edu.co/investigacion/la-investigacion-en-la-universidad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors"
+                >
                   Investigación
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors">
+                <a
+                  href="https://bienestar.unal.edu.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/90 dark:text-surface/90 hover:text-white dark:hover:text-unal-light transition-colors"
+                >
                   Bienestar Universitario
                 </a>
               </li>
@@ -42,16 +62,31 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Síguenos</h3>
             <div className="flex space-x-4">
-              <a href="#" className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/UNALOficial?locale=es_LA"
+                className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Facebook className="h-5 w-5 text-unal dark:text-white" />
               </a>
-              <a href="#" className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-unal dark:text-white" />
-              </a>
-              <a href="#" className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/unaloficial"
+                className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Instagram className="h-5 w-5 text-unal dark:text-white" />
               </a>
-              <a href="#" className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors" aria-label="YouTube">
+              <a
+                href="https://www.youtube.com/@UNALoficial"
+                className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Youtube className="h-5 w-5 text-unal dark:text-white" />
               </a>
               <a href="#" className="bg-surface p-2 rounded-lg hover:bg-surface/90 transition-colors" aria-label="Email">
