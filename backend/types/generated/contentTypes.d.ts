@@ -444,7 +444,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    event: Schema.Attribute.Relation<'manyToOne', 'api::event.event'>;
+    events: Schema.Attribute.Relation<'manyToMany', 'api::event.event'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -473,7 +473,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.String;
     categories: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::category.category'
     >;
     contactEmail: Schema.Attribute.Email;
